@@ -24,7 +24,7 @@ const upload = async (episode) => {
 
   await page.goto("https://anchor.fm/dashboard/episode/new")
 
-  await page.setViewport({ width: 1600, height: 789 })
+  await page.setViewport({ width: 2800, height: 1800 })
 
   await navigationPromise
   console.log("#email", email)
@@ -59,9 +59,11 @@ const upload = async (episode) => {
   const [switchToHTMLButton] = await page.$x("//button[contains(., 'HTML')]")
   if (switchToHTMLButton) {
     await switchToHTMLButton.click()
+  } else {
+    console.log("❌  No switch to HTML button")
   }
 
-  await page.waitForSelector("textarea[name=description]")
+  await page.waitForSelector("textarea[name=description]", { visible: true })
   await page.type("textarea[name=description]", episode.description)
 
   console.log("👉  Save as Draft")
