@@ -1,9 +1,9 @@
-name: Node.js App CI
+name: dir2tree
   
 on: 
   push: 
     branches:
-      - main
+      - dir2tree
     paths:
       - 'blablas/**'
       - '!blablas/generated.json'
