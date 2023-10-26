@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'blablas/**'
+      - '!blablas/generated.json'
 jobs:
   build:
     permissions :
