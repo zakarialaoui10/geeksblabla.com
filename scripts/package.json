@@ -8,13 +8,15 @@
     "upload-to-anchor": "node ./index.js",
     "test-upload-to-anchor": "node ./test-puppeteer-upload.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dir2tree": "^0.2.0"
+  },
   "devDependencies": {
+    "front-matter": "^3.1.0",
     "marked": "^4.0.8",
     "puppeteer": "^10.0.0",
     "rss-parser": "^3.7.6",
-    "showdown": "^1.9.1",
-    "front-matter": "^3.1.0"
+    "showdown": "^1.9.1"
   },
   "license": "MIT",
   "repository": {
